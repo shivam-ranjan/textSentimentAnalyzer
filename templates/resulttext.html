@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Text Based Sentimental Analyzer</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='spam-favicon.ico') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+	</head>
+
+	<body>
+
+		<!-- Website Title -->
+    	<div class="container">
+    		<h2 class='container-heading'><span class="heading_font">Text Seintiment Analyzer</h2>
+            <div class='description'>
+    		</div>
+    	</div>
+
+		<!-- Result -->
+		<div class="results">
+			{% if prediction==1 %}
+				<h1>Predicted Genre: <span class='result-prediction'>Negative 🙁</span></h1>
+			{% elif prediction==2 %}
+				<h1>Predicted Genre: <span class='result-prediction'>Positive 😆</span></h1>
+			{% elif prediction==3 %}
+				<h1>Predicted Genre: <span class='result-prediction'>Neutral 😐</span></h1>
+	{% endif %}
+  </div>
+
+		<!-- Footer -->
+        <div class='footer'>
+            <p class='footer-description'>Made with ❤️ by Shivam Ranjan.  <a target="_blank" href="https://github.com/shivam-ranjan"><i class="fab fa-github fa-lg contact-icon"></i></a></p>
+        </div>
+	</body>
+</html>
